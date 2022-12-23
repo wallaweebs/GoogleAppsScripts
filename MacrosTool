@@ -1,0 +1,12 @@
+/** https://docs.google.com/spreadsheets/d/1T5f3CNd1NW52YgdrqpJG0R4snw82AEjuFHZAgpcQ1GQ/edit#gid=0 */
+
+
+function Header() {
+  var spreadsheet = SpreadsheetApp.getActive();
+  var sheet = spreadsheet.getActiveSheet();
+  sheet.getRange(spreadsheet.getCurrentCell().getRow(), 1, 1, 10).activate();
+  spreadsheet.getActiveRangeList().setBackground('#afeeee')
+  .setFontColor('#191970')
+  .setFontWeight('bold');
+  spreadsheet.getActiveSheet().setFrozenRows(1);
+};
